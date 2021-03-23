@@ -1,0 +1,112 @@
+*{
+    box-sizing: border-box;
+}
+.root {
+    --primary : rgb(23, 198, 204);
+    --secondary : rgb(53, 53, 53);
+    
+}
+img{
+    max-width: 100%;
+}
+body html{
+
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    
+    align-items: center;
+    border-bottom: 1px solid var(--primary);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+#logo{
+    padding-bottom: 20px;
+}
+nav > ul {
+        display: flex;
+        padding-left: 0;
+} 
+nav > ul >li {
+        list-style: none;
+    }
+
+nav ul li:before{
+    background-color: rgb(23, 198, 204);
+    border-radius: 50%;
+    content: ''; /*lösch abc ausi -> muss bei :before und after Elementen immer definiert werden */
+    display: inline-block;
+    height: 12px;
+    width: 8px;
+}
+nav ul li:after{
+    content: ''; /*der content ist wieder weg*/
+    background-color:  rgb(23, 198, 204);
+    display: block;
+    margin: 0 auto;
+    height: 2px;
+    transition: width 300ms;
+    width: 0%;
+
+}
+nav ul li:hover:after{ /*23.03.2021*/
+    /*content: ''; /*der content ist wieder weg
+    background-color:  rgb(23, 198, 204);
+    display: block;
+    height: 2px; */
+    width: 100%;
+}
+nav > ul > li > a {
+    color: var(--secondary);
+        padding: 0 10px;
+        text-decoration:none;
+        text-transform: uppercase;
+    
+    }
+
+#headerimage{
+    align-items: center;
+    background-image: url('../images/hgbild.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    justify-content: center;
+}
+
+
+.bg_image{
+    background-image: url(../images/hgbild.jpg);
+}
+footer{
+    background-color: rgba(179, 244, 255, 0.534)
+}
+.icons i {
+    font-size: 3rem; /*  HTML -> root / rm -> die laetzte schrift das wir verwendet haben*/
+    color: rgb(40, 206, 218)   
+}
+.icons > div ,
+.icons [class *='col-']{
+    text-align: center;
+}
+@media screen and (max-width: 768px){
+    #logo img{
+        width: 1500px;
+    }
+}
+@media screen and (max-width:560px){
+    [class*='col-']{
+        padding: 20px;
+        width: 100%;
+    }
+    .row{
+        padding:20px 0;
+    }
+}
+/* COFFE HOUSE resposive machen */
+/*wenn das fertig gemacht wurde::beforeEine Website mit bootstrap machen (nur Bootestrap Klassen verwenden)
+Keine eigne CSS! */
