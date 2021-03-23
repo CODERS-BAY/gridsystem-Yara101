@@ -1,50 +1,52 @@
 *{
     box-sizing: border-box;
+    font-family:cursive;
 }
 .root {
-    --primary : rgb(23, 198, 204);
-    --secondary : rgb(53, 53, 53);
+    --primary : rgb(134, 80, 17);
+    --secondary : rgb(255, 255, 255);
+    
     
 }
 img{
     max-width: 100%;
 }
-body html{
-
+html, body{
     margin: 0;
     padding: 0;
 }
 
 header {
-    
-    align-items: center;
-    border-bottom: 1px solid var(--primary);
+    height: 100px;
+    background-color: rgb(98, 61, 18);
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     padding: 20px;
 }
-#logo{
-    padding-bottom: 20px;
-}
 nav > ul {
-        display: flex;
-        padding-left: 0;
+    display: flex;
+    padding-left: 0;
 } 
 nav > ul >li {
-        list-style: none;
-    }
+    list-style: none;
+}
+nav > ul > li > a {
+    color: #fff;
+    padding: 0 10px;
+    text-decoration:none;
 
+}
 nav ul li:before{
-    background-color: rgb(23, 198, 204);
+    content: '';
+    background-color: rgb(255, 255, 255);
     border-radius: 50%;
-    content: ''; /*lösch abc ausi -> muss bei :before und after Elementen immer definiert werden */
     display: inline-block;
     height: 12px;
-    width: 8px;
+    width:8px;
 }
 nav ul li:after{
-    content: ''; /*der content ist wieder weg*/
-    background-color:  rgb(23, 198, 204);
+    content: '';
+    background-color:  rgb(236, 223, 178);
     display: block;
     margin: 0 auto;
     height: 2px;
@@ -52,24 +54,27 @@ nav ul li:after{
     width: 0%;
 
 }
-nav ul li:hover:after{ /*23.03.2021*/
-    /*content: ''; /*der content ist wieder weg
-    background-color:  rgb(23, 198, 204);
-    display: block;
-    height: 2px; */
+nav ul li:hover:after{
+    
     width: 100%;
 }
-nav > ul > li > a {
-    color: var(--secondary);
-        padding: 0 10px;
-        text-decoration:none;
-        text-transform: uppercase;
-    
-    }
-
+h1{
+    color:  rgb(255, 255, 255);
+    text-align: center;
+}
+h1.hh1{
+    color:  rgb(98, 61, 18); 
+    text-align: left;
+}
+h2{
+    color:  rgb(98, 61, 18); 
+    text-align: center; 
+}
+p{
+    color:  rgb(98, 61, 18);
+}
 #headerimage{
-    align-items: center;
-    background-image: url('../images/hgbild.jpg');
+    background-image: url(../images/frontpage.jpg);
     background-position: center;
     background-size: cover;
     display: flex;
@@ -78,24 +83,58 @@ nav > ul > li > a {
     justify-content: center;
 }
 
-
 .bg_image{
-    background-image: url(../images/hgbild.jpg);
+    background-image: url(../images/hintergrund.jpg);
+    color:#fff;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
 }
+
 footer{
-    background-color: rgba(179, 244, 255, 0.534)
+    
+    background-color:  rgb(98, 61, 18);
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    
 }
+footer > div > .row{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+}.pp{
+    color: #fff;
+}
+button{
+    background-color: rgb(98, 61, 18);
+}
+.button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration:none;
+    display: block;
+    font-size: 16px;
+    margin: 4px auto;
+    cursor: pointer;
+
+  }
 .icons i {
     font-size: 3rem; /*  HTML -> root / rm -> die laetzte schrift das wir verwendet haben*/
-    color: rgb(40, 206, 218)   
+    color: rgb(90, 53, 18)   
 }
 .icons > div ,
 .icons [class *='col-']{
     text-align: center;
+    
 }
 @media screen and (max-width: 768px){
     #logo img{
-        width: 1500px;
+        width: 70px;
     }
 }
 @media screen and (max-width:560px){
@@ -107,6 +146,36 @@ footer{
         padding:20px 0;
     }
 }
-/* COFFE HOUSE resposive machen */
-/*wenn das fertig gemacht wurde::beforeEine Website mit bootstrap machen (nur Bootestrap Klassen verwenden)
-Keine eigne CSS! */
+
+div.Sozialmedia{
+    color: #fff;
+    align-items: center;
+    display: block;
+    transition: width 300ms;
+   
+    
+
+}
+@media screen and (max-width: 429px){
+    #logo img{
+        width: 70px;
+    }
+    header{
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li{
+      font-size: 10px;
+    
+    }
+    footer{
+        height:initial;
+        width: 100%;
+    }
+    .sozialmedia ,.row 
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
